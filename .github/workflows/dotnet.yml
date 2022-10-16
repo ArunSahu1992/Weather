@@ -27,7 +27,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
       working-directory: ./TestProject1
       
-    - name: login
+    - name: login 
       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
       with:
           username: arunsahu92
@@ -39,5 +39,5 @@ jobs:
           context: .
           dockerfile: dockerfile
           push: true
-          tags: aruntest
+          tags: arunsahu92/dot-net-codebase
           labels: arunlabel
