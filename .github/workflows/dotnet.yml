@@ -33,6 +33,7 @@ jobs:
       working-directory: ./Weather
       
     - name: Deploy to IIS
-      run:
-        Copy-Item ./Weather/* C:/inetpub/wwwroot/dotnetcore-webapp -Recurse -Force
       shell: cmd
+      run: |
+        xcopy /s /y ./Weather/* C:/inetpub/wwwroot/dotnetcore-webapp
+   
