@@ -19,7 +19,6 @@ jobs:
         dotnet-version: 6.0
     
     - name: Build
-    - shell: cmd
       run: dotnet build --no-restore
       working-directory: ./Weather
     - name: Test
