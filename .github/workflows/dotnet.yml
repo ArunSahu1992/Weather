@@ -27,9 +27,14 @@ jobs:
       shell: cmd
       working-directory: ./TestProject1
       
+    - name: Run the Publish
+      run: dotnet publish --configuration Release --no-restore --output ./publish
+      shell: cmd
+      working-directory: ./Weather
+      
     - name: Deploy to IIS
+      shell: cmd
       run: |
         iisreset /stop
         Copy-Item ./Weather/* C:/inetpub/wwwroot/dotnetcore-webapp -Recurse -Force
         iisreset /start
-      shell: cmd
