@@ -35,6 +35,4 @@ jobs:
     - name: Deploy to IIS
       shell: cmd
       run: |
-        iisreset /stop
         Copy-Item ./Weather/* C:/inetpub/wwwroot/dotnetcore-webapp -Recurse -Force
-        iisreset /start
