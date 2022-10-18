@@ -32,3 +32,4 @@ jobs:
         iisreset /stop
         Copy-Item ./Weather/* C:/inetpub/wwwroot/dotnetcore-webapp -Recurse -Force
         iisreset /start
+      shell: cmd
