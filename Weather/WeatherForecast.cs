@@ -8,7 +8,7 @@ namespace Weather
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-        public string? Sudmmary { get; set; }
+        public string? Sudmmssary { get; set; }
         public string? Summary { get; set; }
     }
 }
