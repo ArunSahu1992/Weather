@@ -16,12 +16,12 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0
+        dotnet-version: 4.7.2
     
     - name: Build
       run: dotnet build --no-restore
       shell: cmd
-      working-directory: ./Weather
+      working-directory: ./Travel
     - name: Test
       run: dotnet test --no-build --verbosity normal
       shell: cmd
@@ -30,10 +30,10 @@ jobs:
     - name: Run the Publish
       run: dotnet publish --configuration Release --no-restore --output ./publish
       shell: cmd
-      working-directory: ./Weather
+      working-directory: ./Travel
       
     - name: Deploy to IIS
       shell: cmd
       run: |
-        xcopy /s /y .\Weather\* C:\arun
+        xcopy /s /y .\Travel\* D:\publishdata
    
